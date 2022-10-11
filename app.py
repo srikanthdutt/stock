@@ -12,7 +12,6 @@ def hello():
 
 @app.route('/get_stock_val/<ticker>', methods=['GET'])
 def get_stock_value(ticker):
-    # Testing gcp trigger
     bl = create_business_logic()
     prediction = bl.do_predictions_for(ticker)
 
