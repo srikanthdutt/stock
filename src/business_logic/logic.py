@@ -15,7 +15,8 @@ def get_prediction(ticker):
         pred = baseline(data)
         # print(f'predicted value is {pred}')
         reco = 'Sell' if data['close'].iloc[-1] > pred else 'Buy'
-        return f"tomorrow's predicted {pred} <br> today's close {data['close'].iloc[-1]} <br><br> " \
-               f"<b>Recommendation: {reco}</b>"
+        return reco
+        # return f"tomorrow's predicted {pred} <br> today's close {data['close'].iloc[-1]} <br><br> " \
+        #        f"<b>Recommendation: {reco}</b>"
     else:
         return data
