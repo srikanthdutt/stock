@@ -5,19 +5,21 @@ from src.business_logic.logic import *
 
 app = Flask(__name__)
 
+
 @app.route('/', methods=['GET'])
 def hello():
     return f'Welcome to Stock Picker!!\nEX: get_stock_val/<ticker>\n'
+
 
 @app.route('/test/', methods=['GET'])
 def test():
     return f'Test is being done'
 
+
 @app.route('/get_stock_val/<ticker>', methods=['GET'])
 def get_stock_value(ticker):
     # return f'the ticker selected is {ticker}'
-    return get_prediction(ticker)
-
+    return get_prediction(ticker, mname='arima', days_cnt=3*365)
 
 
 if __name__ == '__main__':
