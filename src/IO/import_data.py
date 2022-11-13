@@ -17,3 +17,7 @@ def get_info(ticker, days_cnt=False):
 
 def is_sp500(ticker):
     return 'Ticker not in S&P 500. Please try another ticker' if ticker not in si.tickers_sp500() else ticker
+
+
+def get_sp500():
+    return si.tickers_sp500()
