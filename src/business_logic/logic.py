@@ -113,7 +113,7 @@ def get_prediction(ticker, mname='baseline', days_cnt=30, return_accuracy=False,
         logging.info(print_val)
 
         # replace print_val with reco when done
-        return (b_accuracy_train, b_accuracy_test) if return_accuracy is True else print_val
+        return (b_accuracy_train, b_accuracy_test) if return_accuracy is True else reco
 
     else:
         return data
