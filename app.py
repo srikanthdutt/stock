@@ -20,7 +20,7 @@ def test():
 @app.route('/get_stock_val/<ticker>', methods=['GET'])
 def get_stock_value(ticker):
     # return f'the ticker selected is {ticker}'
-    return get_prediction(ticker, mname='lstm', days_cnt=3 * 365)
+    return get_prediction(ticker.upper(), mname='lstm', days_cnt=3 * 365)
 
 
 if __name__ == '__main__':
